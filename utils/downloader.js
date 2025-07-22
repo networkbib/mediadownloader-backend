@@ -1,4 +1,6 @@
-import { YtDlpWrap } from 'yt-dlp-wrap';
+import pkg from 'yt-dlp-wrap';
+const { YtDlpWrap } = pkg;
+
 import path from 'path';
 import fs from 'fs';
 
