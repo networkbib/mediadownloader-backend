@@ -1,12 +1,10 @@
 import pkg from 'yt-dlp-wrap';
-
-const YtDlpWrap = pkg.default || pkg;
-
-const ytDlpWrap = new YtDlpWrap();
-
 import path from 'path';
 import fs from 'fs';
 
+const YtDlpWrap = pkg.default || pkg;
+const ytDlpPath = path.resolve('./bin/yt-dlp');
+const ytDlpWrap = new YtDlpWrap(ytDlpPath);
 const outputDir = './downloads';
 
 export async function downloadMedia(url, format, type) {
